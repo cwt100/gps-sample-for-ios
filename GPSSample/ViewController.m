@@ -47,10 +47,15 @@
 }
 
 - (void)onceButtonClick:(id)sender {
+    
+    [self clearData];
+    
     [gpsModel startUpdateLocation];
 }
 
 - (void)repeatStartButtonClick:(id)sender {
+    
+    [self clearData];
     
     [self.repeatButton setTitle:@"STOP" forState:UIControlStateNormal];
     [self.repeatButton addTarget:self
@@ -68,6 +73,12 @@
                 forControlEvents:UIControlEventTouchUpInside];
     
     [gpsModel stopUpdateLocationTimer];
+}
+
+#pragma mark - Clear data label
+- (void)clearData {
+    self.latitudeLabel.text = nil;
+    self.longitudeLabel.text = nil;
 }
 
 #pragma mark - GPSModel Delegate
