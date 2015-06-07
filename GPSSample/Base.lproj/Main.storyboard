@@ -47,6 +47,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnF-Em-r06">
+                                <rect key="frame" x="79" y="30" width="57" height="30"/>
+                                <state key="normal" title="REPEAT">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -56,10 +62,12 @@
                             <constraint firstItem="n5V-3M-Zba" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Dla-FA-G62"/>
                             <constraint firstItem="qDK-cb-4N3" firstAttribute="top" secondItem="ytZ-QV-gMg" secondAttribute="top" id="Eul-Pz-0TX"/>
                             <constraint firstItem="qDK-cb-4N3" firstAttribute="width" secondItem="ePX-QQ-fzN" secondAttribute="width" id="FT6-lp-Da0"/>
+                            <constraint firstItem="JnF-Em-r06" firstAttribute="leading" secondItem="n5V-3M-Zba" secondAttribute="trailing" constant="20" id="Gh6-1O-Bmi"/>
                             <constraint firstItem="ePX-QQ-fzN" firstAttribute="top" secondItem="n5V-3M-Zba" secondAttribute="bottom" constant="10" id="KeW-TF-0q0"/>
                             <constraint firstItem="qDK-cb-4N3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Nkt-Wd-2n9"/>
                             <constraint firstItem="n5V-3M-Zba" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="TGB-94-wve"/>
                             <constraint firstItem="qDK-cb-4N3" firstAttribute="top" secondItem="ePX-QQ-fzN" secondAttribute="bottom" constant="10" id="Tds-he-Uh2"/>
+                            <constraint firstItem="n5V-3M-Zba" firstAttribute="top" secondItem="JnF-Em-r06" secondAttribute="top" id="Z36-zn-vbR"/>
                             <constraint firstItem="ePX-QQ-fzN" firstAttribute="top" secondItem="aMh-PR-Vvz" secondAttribute="top" id="mLA-Ao-Ql8"/>
                         </constraints>
                     </view>
@@ -67,6 +75,7 @@
                         <outlet property="latitudeLabel" destination="aMh-PR-Vvz" id="QQz-VL-S8s"/>
                         <outlet property="longitudeLabel" destination="ytZ-QV-gMg" id="zSF-Df-PQ0"/>
                         <outlet property="onceButton" destination="n5V-3M-Zba" id="CFH-Cx-jQb"/>
+                        <outlet property="repeatButton" destination="JnF-Em-r06" id="XVK-nx-PzO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

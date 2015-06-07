@@ -14,7 +14,9 @@
 @end
 
 @implementation GPSModel{
+    
     CLLocationManager *localcationManager;
+    NSTimer *updateLocationTimer;
 }
 
 #pragma mark - init
@@ -50,6 +52,26 @@
 
 - (void)stopUpdateLocation {
     [localcationManager stopUpdatingLocation];
+}
+
+- (void)startUpdateLocationWithTimeInterval:(NSTimeInterval)timeInterval {
+    
+    [self stopUpdateLocationTimer];
+    
+    [self startUpdateLocation];
+    updateLocationTimer = [NSTimer scheduledTimerWithTimeInterval:timeInterval
+                                                           target:self
+                                                         selector:@selector(startUpdateLocation)
+                                                         userInfo:nil
+                                                          repeats:YES];
+}
+
+- (void)stopUpdateLocationTimer {
+    
+    if (updateLocationTimer) {
+        [updateLocationTimer invalidate];
+        updateLocationTimer = nil;
+    }
 }
 
 #pragma mark - LocationManager Delegate

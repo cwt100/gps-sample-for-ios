@@ -16,6 +16,14 @@
 
 - (void)startUpdateLocation;
 
+/**
+ * @brief Time to update location.
+ * @param timeInterval The value of NSTimeInterval.
+ */
+- (void)startUpdateLocationWithTimeInterval:(NSTimeInterval)timeInterval;
+
+- (void)stopUpdateLocationTimer;
+
 @end
 
 @protocol GPSModelDelegate
